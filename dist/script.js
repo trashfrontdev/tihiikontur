@@ -85,12 +85,15 @@ startAutoplay();
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-nav');
+const siteHeader = document.querySelector('.site-header');
 menuToggle.addEventListener('click', () => {
   const isOpen = navigation.classList.toggle('is-open');
+  siteHeader.classList.toggle('menu-is-open', isOpen);
   menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
 navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   navigation.classList.remove('is-open');
+  siteHeader.classList.remove('menu-is-open');
   menuToggle.setAttribute('aria-expanded', 'false');
 }));
 
