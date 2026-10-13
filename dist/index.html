@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Тихий контур — индивидуальный дизайн квартир." />
+    <title>Тихий контур — дизайн квартир</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Тихий контур, на главную">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Тихий<br />контур</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav id="main-nav" aria-label="Основная навигация">
+        <a href="#approach">Подход</a>
+        <a href="#directions">Направления</a>
+        <a href="#process">Процесс</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Примеры интерьеров">
+        <div class="hero-slides">
+          <div class="hero-track">
+            <article class="hero-slide is-active" data-slide="0">
+              <img src="images/hero-1.png" alt="Светлая гостиная с видом на город" />
+            </article>
+            <article class="hero-slide" data-slide="1">
+              <img src="images/hero-2.jpg" alt="Светлая гостиная в природных оттенках" />
+            </article>
+            <article class="hero-slide" data-slide="2">
+              <img src="images/hero-3.jpg" alt="Гостиная с каменной отделкой в вечернем свете" />
+            </article>
+          </div>
+        </div>
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Дизайн квартир · 01—03</p>
+          <h1 class="hero-title"><span>Дом, в котором</span><span>хочется быть.</span></h1>
+          <p class="hero-copy">Создаём индивидуальные интерьеры для реальной жизни — спокойные, цельные, ваши.</p>
+          <a class="button button-light" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="slider-controls" aria-label="Переключение изображений">
+          <button class="slider-button slider-prev" type="button" aria-label="Предыдущее изображение"><span aria-hidden="true">←</span></button>
+          <button class="slider-button slider-next" type="button" aria-label="Следующее изображение"><span aria-hidden="true">→</span></button>
+        </div>
+        <div class="hero-bottom">
+          <p>Каждый интерьер начинается<br />с внимательного разговора.</p>
+          <div class="slider-count"><span class="current-slide">01</span><span>/</span><span>03</span></div>
+        </div>
+      </section>
+
+      <section class="intro section" id="approach">
+        <p class="section-label">[ 01 ] О студии</p>
+        <div class="intro-grid">
+          <p class="intro-lead">Интерьер не должен объяснять, <em>кто вы.</em> Он должен помогать вам жить в своём ритме.</p>
+          <div class="intro-detail">
+            <p>Тихий контур — студия индивидуального дизайна квартир. Мы соединяем привычки, архитектуру пространства и тактильность материалов в интерьер, который остаётся актуальным годами.</p>
+            <a class="text-link" href="#process">Как мы работаем <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="directions section" id="directions">
+        <div class="section-heading">
+          <p class="section-label">[ 02 ] Направления</p>
+          <h2>Разные характеры.<br /><em>Один подход.</em></h2>
+          <p>Это не готовые шаблоны, а отправные точки для диалога о вашем будущем пространстве.</p>
+        </div>
+        <div class="direction-grid">
+          <article class="direction-card direction-card--low">
+            <img src="images/section-1.jpg" alt="Гостиная с деревом и мягким дневным светом" loading="lazy" />
+            <div class="card-caption"><span>01</span><h3>Тёплая<br />современность</h3><span>↗</span></div>
+          </article>
+          <article class="direction-card direction-card--high">
+            <img src="images/section-2.jpg" alt="Кухня с тёмным деревом и подсветкой" loading="lazy" />
+            <div class="card-caption"><span>02</span><h3>Точная<br />выразительность</h3><span>↗</span></div>
+          </article>
+          <article class="direction-card direction-card--low">
+            <img src="images/section-3.jpg" alt="Светлое пространство с арочными окнами" loading="lazy" />
+            <div class="card-caption"><span>03</span><h3>Тишина<br />и воздух</h3><span>↗</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process section" id="process">
+        <div class="process-top">
+          <p class="section-label">[ 03 ] Полный дизайн-проект</p>
+          <h2>От первого<br />ощущения —<br /><em>до деталей.</em></h2>
+        </div>
+        <ol class="process-list">
+          <li><span>01</span><div><h3>Знакомство</h3><p>Разбираемся, как вы живёте сейчас и каким хотите видеть свой дом.</p></div></li>
+          <li><span>02</span><div><h3>Планировка</h3><p>Находим логику пространства, в которой удобно именно вам.</p></div></li>
+          <li><span>03</span><div><h3>Концепция</h3><p>Собираем материалы, свет, мебель и настроение в единый образ.</p></div></li>
+          <li><span>04</span><div><h3>Документация</h3><p>Переводим идею в точные решения, понятные для реализации.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="gallery section" aria-labelledby="gallery-title">
+        <div class="gallery-heading">
+          <p class="section-label">[ 04 ] Вдохновение</p>
+          <h2 id="gallery-title">Пространства<br /><em>с настроением.</em></h2>
+          <p>Подборка образов, из которых рождается характер будущего интерьера.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-main"><img src="images/interier-1.jpg" alt="Гостиная с винтажным креслом и видом на город" loading="lazy" /><figcaption>Тепло дерева</figcaption></figure>
+          <figure class="gallery-small"><img src="images/interier-2.jpg" alt="Гостиная в природных тонах с камином" loading="lazy" /><figcaption>Природные фактуры</figcaption></figure>
+          <figure class="gallery-wide"><img src="images/interier-3.jpg" alt="Гостиная с камином на закате" loading="lazy" /><figcaption>Свет как материал</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-copy">
+          <p class="section-label">[ 05 ] Начнём разговор</p>
+          <h2>Расскажите<br />о своём<br /><em>пространстве.</em></h2>
+          <p>Оставьте контакты и пару слов о квартире. Мы покажем, как может начаться ваш проект.</p>
+        </div>
+        <form class="contact-form" novalidate>
+          <label>Как к вам обращаться?<input type="text" name="name" autocomplete="name" required placeholder="Ваше имя" /></label>
+          <label>Телефон или почта<input type="text" name="contact" autocomplete="tel" required placeholder="Для связи" /></label>
+          <label>Расскажите о задаче<textarea name="message" rows="3" placeholder="Квартира, метраж, пожелания"></textarea></label>
+          <button class="button button-dark" type="submit">Отправить запрос <span aria-hidden="true">↗</span></button>
+          <p class="form-note">Демонстрационная форма: данные никуда не отправляются.</p>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>Тихий<br />контур</span></a>
+      <p>Индивидуальный дизайн квартир<br />для жизни в своём ритме.</p>
+      <a class="back-top" href="#top">Наверх <span aria-hidden="true">↑</span></a>
+      <small>© <span class="current-year"></span> Тихий контур</small>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
