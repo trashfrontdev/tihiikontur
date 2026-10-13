@@ -107,7 +107,7 @@ form.addEventListener('submit', event => {
     formMessage.textContent = 'Пожалуйста, укажите имя и способ связи.';
     return;
   }
-  formMessage.textContent = `Спасибо, ${name}. В рабочей версии здесь будет отправка заявки.`;
+  formMessage.textContent = `Спасибо, ${name}! Мы с вами свяжемся.`;
   form.reset();
 });
 document.querySelector('.current-year').textContent = new Date().getFullYear();
