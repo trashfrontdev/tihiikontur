@@ -4,6 +4,7 @@ const nextButton = document.querySelector('.slider-next');
 const previousButton = document.querySelector('.slider-prev');
 const slideTrack = document.querySelector('.hero-track');
 const hero = document.querySelector('.hero');
+if (slides.length) {
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
 
@@ -82,6 +83,7 @@ hero.addEventListener('pointerup', (event) => {
 });
 hero.addEventListener('pointercancel', () => { swipeStart = null; });
 startAutoplay();
+}
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-nav');
@@ -112,9 +114,19 @@ form.addEventListener('submit', event => {
 });
 document.querySelector('.current-year').textContent = new Date().getFullYear();
 
-document.body.classList.add('is-ready');
+function playPageEntrance() {
+  document.body.classList.remove('is-ready');
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => document.body.classList.add('is-ready'));
+  });
+}
+
+playPageEntrance();
+window.addEventListener('pageshow', event => {
+  if (event.persisted) playPageEntrance();
+});
 const revealElements = document.querySelectorAll(
-  '.intro-grid > *, .section-heading > *, .direction-card, .process-top, .process-list li, .gallery-heading > *, .gallery figure, .contact > *'
+  '.intro-grid > *, .section-heading > *, .direction-card, .process-top, .process-list li, .gallery-heading > *, .gallery figure, .contact > *, .page-intro > *, .works-layout > *, .work-item, .about-story > *, .about-portrait, .values-list > *'
 );
 revealElements.forEach(element => element.classList.add('reveal'));
 
@@ -128,3 +140,33 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: .12, rootMargin: '0px 0px -28px' });
 
 revealElements.forEach(element => revealObserver.observe(element));
+
+const workItems = Array.from(document.querySelectorAll('.work-item'));
+const workImage = document.querySelector('.work-image img');
+const workIndex = document.querySelector('.work-index');
+const workPrevious = document.querySelector('.work-prev');
+const workNext = document.querySelector('.work-next');
+
+if (workItems.length && workImage && workIndex) {
+  let activeWork = 0;
+  const selectWork = index => {
+    activeWork = (index + workItems.length) % workItems.length;
+    const item = workItems[activeWork];
+    workItems.forEach((work, position) => {
+      const isActive = position === activeWork;
+      work.classList.toggle('is-active', isActive);
+      work.setAttribute('aria-expanded', String(isActive));
+    });
+    workImage.classList.add('is-changing');
+    window.setTimeout(() => {
+      workImage.src = item.dataset.image;
+      workImage.alt = item.dataset.alt;
+      workIndex.textContent = String(activeWork + 1).padStart(2, '0');
+      workImage.classList.remove('is-changing');
+    }, 160);
+  };
+
+  workItems.forEach((item, index) => item.addEventListener('click', () => selectWork(index)));
+  workPrevious.addEventListener('click', () => selectWork(activeWork - 1));
+  workNext.addEventListener('click', () => selectWork(activeWork + 1));
+}

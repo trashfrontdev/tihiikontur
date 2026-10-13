@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="О студии интерьеров Тихий контур." />
+    <title>О нас — Тихий контур</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Тихий контур, на главную"><span class="brand-mark" aria-hidden="true"></span><span>Тихий<br />контур</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span class="visually-hidden">Открыть меню</span></button>
+      <nav id="main-nav" aria-label="Основная навигация">
+        <a href="works.html">Наши работы</a>
+        <a href="about.html" aria-current="page">О нас</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero page-hero--about">
+        <img src="images/hero-2.jpg" alt="Интерьер студии Тихий контур" />
+        <div class="page-hero-scrim"></div>
+        <div class="page-hero-content">
+          <p class="eyebrow">О студии</p>
+          <h1>Проектируем<br /><em>жизнь внутри.</em></h1>
+          <p>Тихий контур — студия интерьеров для людей, которым важно чувствовать себя дома.</p>
+        </div>
+      </section>
+
+      <section class="about-story section">
+        <p class="section-label">[ 01 ] Наша история</p>
+        <div class="about-story-grid">
+          <p class="about-lead">Мы верим, что хороший интерьер не требует внимания к себе. <em>Он поддерживает человека каждый день.</em></p>
+          <div class="about-copy">
+            <p>Студия «Тихий контур» занимается дизайном квартир уже более десяти лет. За это время мы научились слышать не только пожелания о цвете стен или любимой мебели, но и то, как устроена повседневная жизнь семьи.</p>
+            <p>Кто-то любит готовить по утрам, кто-то собирает друзей по выходным, кому-то нужна абсолютная тишина после рабочего дня. Именно из таких деталей рождается сценарий пространства — а уже затем планировки, материалы и свет.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-portrait section">
+        <figure><img src="images/interier-2.jpg" alt="Гостиная с камином в природной палитре" loading="lazy" /></figure>
+        <div class="about-portrait-copy"><p class="section-label">[ 02 ] Наш подход</p><h2>Не декорируем<br />жизнь. <em>Настраиваем её.</em></h2><p>Мы ведём проект от первой встречи до реализации. Сначала разбираемся в пространстве и привычках, затем находим точную идею и переводим её в понятную систему решений для строителей и поставщиков.</p><p>В итоге появляется интерьер, который легко проживать: в нём достаточно места для важного, у каждой вещи есть логика, а атмосфера остаётся цельной даже спустя годы.</p></div>
+      </section>
+
+      <section class="values section">
+        <div class="page-intro"><p class="section-label">[ 03 ] Принципы</p><h2>Спокойно.<br /><em>Последовательно. Точно.</em></h2><p>Три опоры, на которых держится каждый наш проект.</p></div>
+        <div class="values-list">
+          <article><span>01</span><h3>Диалог</h3><p>Не предлагаем готовый стиль. Сначала слушаем и задаём вопросы, чтобы найти собственный язык дома.</p></article>
+          <article><span>02</span><h3>Контекст</h3><p>Работаем с архитектурой, светом за окном, маршрутом внутри квартиры и реальными привычками семьи.</p></article>
+          <article><span>03</span><h3>Реализация</h3><p>Думаем о красоте вместе с бюджетом, сроками и тем, как проект будет собираться в реальности.</p></article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-copy"><p class="section-label">[ 04 ] Начнём разговор</p><h2>Расскажите<br />о своём<br /><em>пространстве.</em></h2><p>Оставьте контакты и пару слов о квартире. Мы покажем, как может начаться ваш проект.</p></div>
+        <form class="contact-form" novalidate>
+          <label>Как к вам обращаться?<input type="text" name="name" autocomplete="name" required placeholder="Ваше имя" /></label>
+          <label>Телефон или почта<input type="text" name="contact" autocomplete="tel" required placeholder="Для связи" /></label>
+          <label>Расскажите о задаче<textarea name="message" rows="3" placeholder="Квартира, метраж, пожелания"></textarea></label>
+          <button class="button button-dark" type="submit">Отправить запрос <span aria-hidden="true">↗</span></button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Тихий<br />контур</span></a><p>Индивидуальный дизайн квартир<br />для жизни в своём ритме.</p><a class="back-top" href="#top">Наверх <span aria-hidden="true">↑</span></a><small>© <span class="current-year"></span> Тихий контур</small></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
